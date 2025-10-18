@@ -22,18 +22,18 @@ function Home(){
             <div className="text-center">
                 <h1 className="text-3xl underline">All Posts</h1>
             </div>
-            <div>
+            <div className="flex">
                 {
                     posts && posts.length > 0 ? (
                         posts.map((post) => (
-                            <div className="border w-52 h-30 flex flex-col justify-between rounded">
+                            <div className="m-5 p-1 border border-slate-500 w-52 h-30 flex flex-col justify-between rounded">
                                 <div>
-                                    <h1>{post.title}</h1>
+                                    <h1 className="text-center">{post.title}</h1>
                                     <p>{post.content}</p>
                                 </div>
                                 <div className="flex justify-end gap-3 m-1">
                                     <button>
-                                        <Link to={`/edit`}>
+                                        <Link to={`/edit/${post.id}`}>
                                             <EditIcon />
                                         </Link>
                                     </button>
