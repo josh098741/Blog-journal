@@ -10,7 +10,7 @@ function CreatePost(){
     const handleSubmit = (event) => {
         event.preventDefault()
         const newPost = {
-            id: new Date(),
+            id: Date.now(), // This will give us a numeric timestamp
             title,
             content
         }
